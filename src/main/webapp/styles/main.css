@@ -1,0 +1,302 @@
+/* Główne style dla paska nawigacji */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Rozstawienie elementów na końcach */
+    align-items: center; /* Wyśrodkowanie elementów pionowo */
+    padding: 10px 20px; /* Margines wewnętrzny dla estetyki */
+    background: linear-gradient(to right, #333, #555, #666);
+}
+
+/* Styl dla logo */
+.logo img {
+    height: 130px; /* Wysokość logo */
+    max-width: 100%; /* Zapewnia, że logo nie przekroczy szerokości kontenera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja powiększenia i cienia */
+}
+
+/* Efekt hover dla logo */
+.logo img:hover {
+    transform: scale(1.1); /* Delikatne powiększenie logo */
+    box-shadow: 0px 4px 10px rgba(255, 174, 0, 0.5); /* Dodanie cienia w kolorze #ffae00 */
+}
+
+/* Styl dla przycisku logowania */
+.login-button img {
+    height: 70px; /* Wysokość przycisku logowania */
+    max-width: 100%; /* Zapewnia, że przycisk nie przekroczy szerokości kontenera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja powiększenia i cienia */
+}
+
+/* Efekt hover dla przycisku logowania */
+.login-button img:hover {
+    transform: scale(1.1); /* Delikatne powiększenie przycisku logowania */
+    box-shadow: 0px 4px 10px rgba(255, 174, 0, 0.5); /* Dodanie cienia w kolorze #ffae00 */
+}
+
+/* usuwamy domyślne style przeglądarki i dodajemy flexboxa,
+kafelki mają zajmować tyle samo miejsca */
+.categories > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* dodane zawikanie */
+}
+
+/* kafelki mają wypełniać całą przestrzeń i być lekko przezroczyste */
+.categories > ul > li {
+    flex: 1 1 14.285%;
+    padding: 0.5rem;
+    font-weight: 500;
+    border: 2px solid #333; /* Dodano ciemniejszy kolor obramowania */
+    color: white;
+    opacity: 0.9; /* Delikatnie zwiększona przezroczystość */
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Animacje dla efektu hover */
+    box-sizing: border-box; /* Uwzględnia padding i border w szerokości kafelka */
+}
+
+/* po najechaniu na kafelek usuwamy przezroczystość */
+.categories > ul > li:hover {
+    opacity: 1;
+    transform: scale(1.05); /* Delikatne powiększenie kafelka */
+    box-shadow: 0px 4px 10px rgba(255, 174, 0, 0.5); /* Cień w kolorze #ffae00 */
+}
+
+/* wyśrodkowanie tekstu na kafelkach i zmiana koloru linków */
+.categories > ul > li > a {
+    color: inherit;
+    display: block;
+    text-align: center;
+    text-decoration: none; /* Usunięcie podkreślenia */
+}
+
+/* kolor kafelków */
+.categories > ul > li {
+    background-color: #ff982b; /* Kolor bazowy (jaśniejszy pomarańczowy) */
+}
+
+.categories > ul > li:nth-child(odd) {
+    background-color: #c76a00; /* Ciemniejszy odcień pomarańczowego */
+}
+
+/* ramka i odstępy */
+.discovery {
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 16px;
+}
+p{
+    color: #ffe0c6;
+}
+.discovery-header {
+    color: white;
+    margin: 0;
+}
+/* zmiana czcionki "Dodane przez..." */
+.discovery-details {
+    color: #737272;
+    font-size: 0.8rem;
+}
+
+/* zmiana koloru odnośnika i zawijanie, gdy zbyt długie */
+.discovery-link,
+.discovery-link:visited {
+    color: #007AFF;
+    word-wrap: break-word;
+}
+
+/* wyrównanie i większa czcionka */
+.discovery-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* zmieniamy paragraf na element liniowy */
+.discovery-votes {
+    display: inline;
+    color: #007AFF;
+}
+
+/* nadpisanie domyślnych marginesów */
+.discovery-bar > p {
+    margin: 0 4px;
+}
+
+/* zmiana koloru przycisków głosowania po najechaniu */
+.upvote:hover {
+    color: #4CD964;
+}
+
+.downvote:hover {
+    color: #FF3B30;
+}
+
+footer {
+    color: #c76a00;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* max szerokość kolumny 1200px i wyśrodkowanie */
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.category-name {
+    color: #c76a00;
+    text-align: center;
+    font-size: 2rem; /* Ustawienie rozmiaru czcionki */
+    animation: pulse 2s infinite; /* Dodanie animacji pulse */
+}
+
+/* Definicja animacji */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.category-name:hover {
+    color: #ffae00; /* Zmiana koloru na jaśniejszy pomarańczowy */
+    transform: rotate(360deg) scale(1.2); /* Obrót i powiększenie */
+    animation: pulse 1s infinite; /* Szybsze pulsowanie */
+}
+
+/* Stylizacja linku jako przycisku */
+.login-button {
+    display: inline-block;
+    padding: 0.3rem 1.2rem; /* Jeszcze mniejsze paddingi dla smuklejszego wyglądu */
+    background-color: transparent; /* Przezroczyste tło początkowe */
+    border: 1.5px solid #f48400; /* Cienka obramówka */
+    border-radius: 25px; /* Lekko zaokrąglone rogi dla zgrabnego wyglądu */
+    font-size: 0.9rem; /* Mniejszy rozmiar tekstu */
+    font-weight: 500; /* Lekko pogrubiony tekst */
+    color: #f48400; /* Kolor tekstu dopasowany do stylistyki */
+    text-transform: uppercase; /* Tekst zamieniony na wielkie litery */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    letter-spacing: 0.07rem; /* Delikatne rozstrzelenie liter */
+    transition: all 0.3s ease; /* Płynne przejście dla wszystkich efektów */
+    position: relative; /* Potrzebne do zastosowania pulsacji */
+    overflow: hidden; /* Ukrycie elementów wychodzących poza obszar przycisku */
+}
+
+/* Efekt po najechaniu na przycisk */
+.login-button:hover {
+    background-color: #f48400; /* Zmiana tła na pomarańczowy przy najechaniu */
+    color: white; /* Zmiana koloru tekstu na biały */
+    box-shadow: 0 5px 20px rgba(244, 132, 0, 0.4); /* Delikatny cień przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie przycisku */
+}
+
+/* Efekt pulsacji na hover */
+.login-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(244, 132, 0, 0.1); /* Delikatna pulsacja kolorem */
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s ease-out;
+}
+
+.login-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Efekt animacji po kliknięciu */
+.login-button:active {
+    transform: translateY(1px) scale(1); /* Powrót przycisku w dół przy kliknięciu */
+    box-shadow: 0 4px 10px rgba(244, 132, 0, 0.2); /* Zmniejszenie cienia */
+}
+
+#welcome-user {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Nowoczesna, czytelna czcionka */
+    font-size: 2.5rem; /* Odpowiednio duży rozmiar tekstu */
+    color: #f48400; /* Dopasowany kolor do stylistyki strony */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    margin-top: 2rem; /* Odstęp od góry ekranu */
+    letter-spacing: 1px; /* Delikatne zwiększenie odstępów między literami */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efekt cienia dla większej głębi */
+    opacity: 0; /* Ustawienie początkowej przezroczystości dla animacji */
+    animation: fadeInSlideDown 1.5s ease-out forwards; /* Animacja wchodzenia tekstu */
+}
+
+@keyframes fadeInSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Tekst lekko powyżej początkowej pozycji */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Tekst wraca na swoje miejsce */
+    }
+}
+
+#welcome-user:hover {
+    color: #ffae00; /* Zmiana koloru tekstu przy najechaniu */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Intensywniejszy cień przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie tekstu przy najechaniu */
+    transition: all 0.3s ease-in-out; /* Płynne przejścia */
+}
+
+.discovery-add-button {
+    position: fixed; /* Przyklejony do miejsca na ekranie */
+    bottom: 40px; /* Oddalony od dołu */
+    right: 40px; /* Oddalony od prawej krawędzi */
+    width: 60px; /* Rozmiar przycisku */
+    height: 60px; /* Rozmiar przycisku */
+    background-color: #ff5733; /* Kolor tła */
+    color: white; /* Kolor ikony */
+    border-radius: 50%; /* Okrągły kształt */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Cień */
+    display: flex; /* Flexbox do wyśrodkowania ikony */
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center; /* Wyśrodkowanie pionowe */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animacja hover */
+    z-index: 1000; /* Zawsze na wierzchu */
+    text-decoration: none; /* Usunięcie podkreślenia */
+}
+
+.discovery-add-button:hover {
+    background-color: #ff784e; /* Zmiana koloru tła na hover */
+    transform: scale(1.15) rotate(15deg); /* Powiększenie i obrócenie przycisku */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Większy cień na hover */
+}
+
+.discovery-add-button:active {
+    transform: scale(0.95); /* Zmniejszenie na kliknięcie */
+}
+
+.discovery-add-button i {
+    animation: pulse 1.5s infinite ease-in-out; /* Pulsująca animacja ikony */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+body{
+    background-color: #333;
+    font-family: 'Oswald', sans-serif;
+
+}
+

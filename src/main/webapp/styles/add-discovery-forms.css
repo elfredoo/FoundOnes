@@ -1,0 +1,74 @@
+.discovery-form {
+    background-color: #1a1a1a; /* Ciemne tło dla kontrastu */
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.discovery-form-title {
+    color: #ffae00; /* Kolor nagłówka pasujący do reszty strony */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.discovery-form input[type="text"],
+.discovery-form input[type="url"],
+.discovery-form select,
+.discovery-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #f48400;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.discovery-form input[type="text"]:focus,
+.discovery-form input[type="url"]:focus,
+.discovery-form select:focus,
+.discovery-form textarea:focus {
+    border-color: #ffae00;
+    background-color: #3a3a3a;
+}
+
+.discovery-form-button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background-color: #f48400;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.discovery-form-button:hover {
+    background-color: #ffae00;
+    transform: scale(1.05);
+}
+
+.discovery-form-button:active {
+    transform: scale(1);
+}
+
+.discovery-form textarea {
+    resize: none; /* Wyłączanie zmiany rozmiaru */
+}
+
+/* Animacja po najechaniu na pole tekstowe */
+.discovery-form input[type="text"]:hover,
+.discovery-form input[type="url"]:hover,
+.discovery-form select:hover,
+.discovery-form textarea:hover {
+    border-color: #ffae00;
+}

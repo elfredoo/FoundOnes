@@ -1,0 +1,29 @@
+<Context>
+    <Resource name="jdbc/foundones"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              type="javax.sql.DataSource"
+              username="root"
+              password="admin"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/foundones?serverTimezone=UTC"
+              maxActive="100"
+              maxIdle="30"
+              maxWait="10000"/>
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           dataSourceName="jdbc/foundones"
+           localDataSource="true"
+           userTable="user"
+           userNameCol="username"
+           userCredCol="password"
+           userRoleTable="user_role"
+           roleNameCol="role_name">
+    <CredentialHandler className="org.apache.catalina.realm.NestedCredentialHandler">
+        <CredentialHandler
+                className="org.apache.catalina.realm.MessageDigestCredentialHandler"
+                algorithm="SHA-256" />
+        <CredentialHandler
+                className="org.apache.catalina.realm.MessageDigestCredentialHandler"/>
+    </CredentialHandler>
+    </Realm>
+
+</Context>

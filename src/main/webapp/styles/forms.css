@@ -1,0 +1,92 @@
+/* Główne stylizacje dla formularza logowania */
+.user-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #BDBDBD; /* Subtelna jasna ramka */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Mocniejszy cień, aby formularz się wyróżniał */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    padding: 30px;
+    margin: 60px auto;
+    max-width: 400px;
+    background-color: #444; /* Ciemne tło, które pasuje do strony */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efekt hover na formularzu */
+.user-form:hover {
+    transform: translateY(-5px); /* Subtelne uniesienie formularza */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Większy cień dla efektu unoszenia */
+}
+
+/* Stylizacja elementów wewnątrz formularza */
+.user-form > * {
+    font-size: 1em;
+    margin: 12px 0;
+    color: #ffe0c6; /* Jasny kolor tekstu, pasujący do strony */
+}
+
+/* Stylizacja pól tekstowych i przycisków */
+.user-form > input,
+.user-form > button {
+    padding: 14px 20px;
+    border: 1px solid #c76a00; /* Pomarańczowa ramka */
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #555; /* Ciemne tło pasujące do formularza */
+    color: #ffe0c6; /* Jasny kolor tekstu */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efekt focus dla inputów */
+.user-form > input:focus {
+    border-color: #ffae00; /* Jaśniejszy pomarańczowy kolor na focus */
+    box-shadow: 0 0 8px rgba(255, 174, 0, 0.5); /* Pomarańczowe podświetlenie */
+    outline: none;
+}
+
+/* Stylizacja tytułu formularza */
+.user-form-title {
+    margin: 0 auto 20px auto;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #ffae00; /* Kolor FoundOnes */
+    text-align: center;
+    font-family: 'Oswald', sans-serif; /* Czcionka używana na stronie */
+}
+
+/* Stylizacja przycisku logowania */
+.user-form-button {
+    color: white;
+    background-color: #c76a00; /* Ciemniejszy pomarańczowy */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif; /* Czcionka używana na stronie */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efekt hover dla przycisku */
+.user-form-button:hover {
+    background-color: #ffae00; /* Jaśniejszy pomarańczowy odcień */
+    transform: translateY(-2px); /* Delikatne uniesienie */
+}
+
+/* Efekt active dla przycisku */
+.user-form-button:active {
+    background-color: #c76a00; /* Ciemniejszy pomarańczowy */
+    transform: translateY(1px); /* Efekt wciśnięcia */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsywność - dopasowanie do mniejszych ekranów */
+@media (max-width: 480px) {
+    .user-form {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .user-form-title {
+        font-size: 1.3em; /* Mniejszy tytuł na mniejszych ekranach */
+    }
+}
